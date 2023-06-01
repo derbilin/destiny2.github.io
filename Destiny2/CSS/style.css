@@ -1,0 +1,465 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+/* ---------------------------------------------導覽列 */
+
+header nav {
+	background-color: black;
+	border: 0.1rem solid black;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	display: flex;
+}
+
+header nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	width: 80%;
+	height: 3rem;
+	padding-top: 1rem;
+}
+
+header nav a.navtitle {
+	text-decoration: none;
+	width: auto;
+}
+
+header nav ul li {
+	list-style-type: none;
+}
+
+header nav.top a {
+	text-decoration: none;
+	font-size: 2rem;
+	color: rgb(51, 51, 51);
+	padding: 1.2rem;
+	transition: 0.2s;
+	position: relative;
+	z-index: 0;
+}
+
+div.drop {
+	display: flex;
+	flex-direction: column;
+	height: 2.5rem;
+}
+
+div.menu {
+	background-image: url(../image/背景2);
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: auto;
+	height: auto;
+	border: 2px solid black;
+	border-radius: 10px;
+	transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+	opacity: 0;
+	box-shadow: 0 10px 10px rgb(0, 0, 0);
+	position: relative;
+	top: -40rem;
+}
+
+.drop:hover .menu {
+	opacity: 1;
+	top: 0rem;
+}
+
+a#titleact,
+a#titlerand,
+a#titleporf,
+a#titlenews {
+	padding-top: 0px;
+}
+
+a#menucos {
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 0.8rem;
+}
+
+a#menucos:hover {
+	color: rgb(255, 157, 0);
+	font-size: 2rem;
+}
+
+#title {
+	color: white;
+	font-weight: 600;
+}
+
+#title:hover {
+	color: red;
+	font-size: 2.2rem;
+}
+
+header div.drop a:hover {
+	color: red;
+	font-size: 2.2rem;
+}
+
+.space {
+	height: 2rem;
+	width: 70rem;
+}
+
+a.type-left {
+	padding-left: 5rem;
+}
+
+/* ------------------------------------------首頁主視覺 */
+
+main section {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+main section div.cover {
+	background-image: url(../image/season.jpg);
+	width: 100%;
+	height: 55rem;
+	background-size: cover;
+}
+
+main section div.shadow {
+	width: 100%;
+	height: 55rem;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+main section div.shadow h1 {
+	color: white;
+	font-size: 10rem;
+	text-align: center;
+	padding-top: 15rem;
+	opacity: 0;
+}
+
+main section div.shadow h3 {
+	color: white;
+	font-size: 2rem;
+	text-align: center;
+	padding-top: 1rem;
+	letter-spacing: 1rem;
+	opacity: 0;
+}
+
+/* ---------------------------------------首頁主視覺動畫 */
+
+main section.thecover h1,
+main section.thecover h3 {
+	position: relative;
+	position: 0.3s;
+	animation: Text 1s ease-in 0.5s normal forwards;
+}
+
+@keyframes Text {
+	from {
+		opacity: 0;
+		top: 2rem;
+	}
+	to {
+		opacity: 1;
+		top: 0rem;
+	}
+}
+
+section.intro {
+	height: 30rem;
+	width: 100%;
+	border-top: 0.5rem solid black;
+	border-bottom: 0.5rem solid black;
+	background-image: url(../image/背景.jpg);
+}
+
+/* --------------------------------------首頁過場圖片、影片 */
+
+main section.sec-image div.image {
+	background-image: url(../image/planet.jpg);
+	width: 100%;
+	height: 61rem;
+	background-size: cover;
+}
+
+main section.sec-image div.sec-shadow {
+	width: 100%;
+	height: 61rem;
+	background-color: rgba(44, 44, 44, 0.6);
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+iframe#vedio {
+	width: 700px;
+	height: 430px;
+	margin-top: 2rem;
+	border: 3px solid rgba(16, 16, 16, 0.9);
+	border-radius: 20px;
+}
+
+/* ---------------------------------------首頁職業簡介 */
+
+section.intro2 {
+	height: 70rem;
+	width: 100%;
+	border-top: 0.5rem solid black;
+	border-bottom: 0.5rem solid black;
+}
+
+main section div.main-text {
+	width: 100%;
+}
+
+main section div.main-text2 {
+	background-image: url(../image/職業背景.jpg);
+	background-size: cover;
+	height: 70rem;
+}
+
+main section div.light {
+	background-color: rgba(16, 16, 16, 0.9);
+	height: 70rem;
+}
+
+main section div.center h3,
+div.main-text h3 {
+	font-size: 5rem;
+	text-align: center;
+	padding: 2rem 0rem;
+}
+
+div.porftext {
+	background-image: url(../image/背景.jpg);
+	width: 70rem;
+	height: auto;
+	border: 4px solid black;
+	border-radius: 20px;
+	margin-top: 2rem;
+}
+
+div.porftext p,
+div.main-text p {
+	font-size: 2rem;
+	padding: 1rem 0rem;
+	text-align: center;
+	font-family: Noto + Sana + TC;
+	font-weight: bolder;
+}
+
+/*-----------------------------------------首頁職業卡片 */
+
+div.center {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.container {
+	width: 70vw;
+	height: 600px;
+	display: flex;
+	gap: 80px;
+	padding-top: 1rem;
+}
+
+.container .card {
+	flex: 1 1;
+	border: 5px solid rgba(0, 0, 0, 1);
+	border-radius: 10px;
+	background-size: cover;
+	background-position: center;
+	opacity: 0.4;
+	transition: 0.5s ease-in-out;
+}
+
+.container .card:nth-child(1) {
+	background-image: url(../image/泰坦.jpg);
+}
+
+.container .card:nth-child(2) {
+	background-image: url(../image/獵人.webp);
+}
+
+.container .card:nth-child(3) {
+	background-image: url(../image/術士.jpg);
+}
+
+.container .card:hover {
+	flex: 10 1;
+	opacity: 1;
+	border: 5px solid #fff;
+	box-shadow: 30px 30px 30px 30px rgba(16, 16, 16, 0.9);
+}
+/*------------------------------------首頁活動區域 */
+
+section.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+	background-image: url(../image/背景2);
+}
+
+#act-text {
+	font-size: 5rem;
+	text-align: center;
+	padding: 2rem 0rem;
+}
+
+#act-center {
+	height: 12vw;
+	width: 40vw;
+	position: relative;
+	top: -30px;
+}
+
+#mainPhoto {
+	margin-top: 2vw;
+	width: 50vw;
+	height: 30vw;
+	object-fit: cover;
+	position: relative;
+	top: -48px;
+	z-index: 10;
+}
+
+/* #mainPhoto:active {
+	animation: actianime 1s ease-in-out forwards;
+} */
+
+/* @keyframes actianime {
+	from {
+		width: 50vw;
+		height: 30vw;
+	}
+	to {
+		width: 100%;
+		height: 100%;
+	}
+} */
+
+.imgCarousel {
+	width: 100px;
+	height: 100px;
+	transition: 0.3s;
+	position: relative;
+	top: -35px;
+}
+
+.imgCarousel:hover {
+	width: 110px;
+	height: 110px;
+	border: 2px solid white;
+	margin: 3px;
+}
+
+img {
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+/*------------------------------------首頁頁尾 */
+
+footer section.fo-body {
+	height: 15rem;
+	width: 100%;
+	border-top: 0.5rem solid black;
+	border-bottom: 0.5rem solid black;
+	background-image: url(../image/背景2);
+}
+
+div.fo-shadow {
+	width: 100%;
+	height: 15rem;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	justify-content: space-around;
+}
+
+div.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+footer div.logo img {
+	height: 10rem;
+	width: 10rem;
+	border: 3px solid rgba(139, 138, 138, 0.6);
+	border-radius: 50%;
+	margin: 30px 5px 0px 5px;
+}
+
+footer div.logo p {
+	color: #fff;
+	text-align: center;
+	padding-top: 1rem;
+}
+
+div.links-part {
+	margin-top: 2rem;
+}
+
+footer h4 {
+	color: #fff;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+footer div.links-part1 img {
+	height: 50px;
+	width: 50px;
+	border: 3px solid rgb(0, 13, 53);
+	border-radius: 50%;
+	margin: 30px 5px 0px 5px;
+	transition: 0.3s ease-in-out;
+}
+
+footer div.links-part1 img:hover {
+	height: 55px;
+	width: 55px;
+	border: 3px solid rgb(254, 86, 86);
+}
+
+div.links-part2 p {
+	color: #fff;
+	padding-top: 2rem;
+	font-size: 1.2rem;
+}
+
+footer div.links-part3 img {
+	height: 50px;
+	width: 100px;
+	border: none;
+	border-radius: 10px;
+	margin: 10px 5px 0px 5px;
+	transition: 0.3s ease-in-out;
+}
+
+footer div.links-part3 a.android img {
+	height: 50px;
+	width: 120px;
+}
+
+footer div.links-part3 img:hover {
+	height: 55px;
+	width: 105px;
+	border: 3px solid rgb(254, 86, 86);
+}

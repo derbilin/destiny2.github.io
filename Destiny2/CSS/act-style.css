@@ -1,0 +1,706 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+/* ---------------------------------------------導覽列 */
+
+header nav {
+	background-color: black;
+	border: 0.1rem solid black;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	display: flex;
+}
+
+header nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	width: 80%;
+	height: 3rem;
+	padding-top: 1rem;
+}
+
+header nav a.navtitle {
+	text-decoration: none;
+	width: auto;
+}
+
+header nav ul li {
+	list-style-type: none;
+}
+
+header nav.top a {
+	text-decoration: none;
+	font-size: 2rem;
+	color: rgb(51, 51, 51);
+	padding: 1.2rem;
+	transition: 0.2s;
+	position: relative;
+	z-index: 0;
+}
+
+div.drop {
+	display: flex;
+	flex-direction: column;
+	height: 2.5rem;
+}
+
+div.menu {
+	background-image: url(../image/背景2);
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: auto;
+	height: auto;
+	border: 2px solid black;
+	border-radius: 10px;
+	transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+	opacity: 0;
+	box-shadow: 0 10px 10px rgb(0, 0, 0);
+	position: relative;
+	top: -40rem;
+}
+
+.drop:hover .menu {
+	opacity: 1;
+	top: 0rem;
+}
+
+a#titleact,
+a#titlerand,
+a#titleporf,
+a#titlenews {
+	padding-top: 0px;
+}
+
+a#menucos {
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 0.8rem;
+}
+
+a#menucos:hover {
+	color: rgb(255, 157, 0);
+	font-size: 2rem;
+}
+
+#title {
+	color: white;
+	font-weight: 600;
+}
+
+#title:hover {
+	color: red;
+	font-size: 2.2rem;
+}
+
+header div.drop a:hover {
+	color: red;
+	font-size: 2.2rem;
+}
+
+.space {
+	height: 2rem;
+	width: 70rem;
+}
+
+a.type-left {
+	padding-left: 5rem;
+}
+
+/* ------------------------------卡片動畫 */
+
+div.center {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.container {
+	width: 70vw;
+	height: 600px;
+	display: flex;
+	gap: 80px;
+	padding-top: 1rem;
+}
+
+.container .card {
+	flex: 1 1;
+	border: 5px solid rgba(0, 0, 0, 1);
+	border-radius: 10px;
+	background-size: cover;
+	background-position: center;
+	opacity: 0.7;
+	transition: 0.5s ease-in-out;
+}
+
+.container .card:nth-child(1) {
+	background-image: url(../image/泰坦.jpg);
+}
+
+.container .card:nth-child(2) {
+	background-image: url(../image/獵人.webp);
+}
+
+.container .card:nth-child(3) {
+	background-image: url(../image/術士.jpg);
+}
+
+.container .card:hover {
+	flex: 10 1;
+	opacity: 1;
+	border: 5px solid #fff;
+	box-shadow: 30px 30px 30px 30px rgba(16, 16, 16, 0.9);
+}
+
+/* -----------------------------簡介基本背景設定 */
+
+section.intro2 {
+	height: 70rem;
+	width: 100%;
+	border-top: 0.5rem solid black;
+	border-bottom: 0.5rem solid black;
+}
+
+main section div.main-text {
+	width: 100%;
+}
+
+main section div.center h3,
+div.main-text h3,
+div.porftext h3 {
+	font-size: 5rem;
+	text-align: center;
+	padding: 2rem 0rem;
+}
+
+div.porftext {
+	background-image: url(../image/背景.jpg);
+	width: 70rem;
+	height: auto;
+	border: 4px solid black;
+	border-radius: 20px;
+	margin-top: 2rem;
+}
+
+div.porftext p,
+div.main-text p {
+	font-size: 2rem;
+	padding: 1rem 0rem;
+	text-align: center;
+	font-family: Noto + Sana + TC;
+	font-weight: bolder;
+}
+
+/* ------------------------活動資訊頁面 */
+
+div.act-mainphoto {
+	background-image: url(../image/destiny.jfif);
+	background-size: cover;
+	width: 100%;
+	height: 45vw;
+	box-shadow: inset 0px 0px 100px 100px #333;
+}
+
+img.act-mainphotoshadow {
+	width: 100%;
+	height: 45vw;
+	opacity: 0.5;
+	box-shadow: inset 0 0 100px #333;
+}
+
+div.act-maintext {
+	position: relative;
+	z-index: 10;
+	top: -30vw;
+}
+
+div.act-maintext h1 {
+	color: rgb(255, 255, 255, 1);
+	font-size: 10vw;
+	text-align: center;
+	text-decoration: underline rgb(34, 34, 34, 0.8);
+}
+
+/* --------------------------------活動宣傳詞 */
+
+section.ActMainText {
+	background-image: url(../image/背景2);
+	background-size: cover;
+	width: 100%;
+	height: 50vw;
+	border-top: 1px solid #000000;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-wrap: wrap;
+	box-shadow: inset 0 0 500px #000000;
+}
+
+div.ActMainText-div1 {
+	display: flex;
+	justify-content: center;
+}
+
+div.ActMainText-div2 {
+	background-image: url(../image/背景4\ 羊皮紙背景.jpg);
+	border: 4px solid black;
+	border-radius: 20px;
+	margin-top: 2rem;
+	width: 40%;
+	height: 40vw;
+	box-shadow: inset 0 0 200px #000000;
+}
+
+/* ------------------------------每週蘇爾位置介紹 */
+
+main section div.act-XURimg {
+	background-image: url(../image/蘇爾位置圖片/XUR背景圖);
+	background-size: cover;
+	height: 70rem;
+}
+
+.container .act-card:nth-child(1) {
+	background-image: url(../image/蘇爾位置圖片/歐洲死區0\ 地圖);
+}
+
+.container .act-card:nth-child(2) {
+	background-image: url(../image/蘇爾位置圖片/歐洲死區2);
+}
+
+.container .act-card:nth-child(3) {
+	background-image: url(../image/術士.jpg);
+}
+
+.container .act-card:nth-child(4) {
+	background-image: url(../image/術士.jpg);
+}
+
+.container .act-card:nth-child(5) {
+	background-image: url(../image/術士.jpg);
+}
+
+.act-container {
+	gap: 10px;
+}
+
+div.act-text {
+	padding-top: 6vw;
+}
+
+.act-card {
+	display: flex;
+	justify-content: center;
+}
+
+.container .act-card p {
+	opacity: 0;
+	transition: 0.5s;
+	color: #2d3e4f;
+	width: 60%;
+	height: 4%;
+	border: 5px solid rgb(139, 139, 139);
+	border-top: none;
+	border-radius: 0px 0px 10px 10px;
+	background-color: black;
+	padding-top: 0;
+}
+
+.container .act-card:hover p {
+	animation: act 0.5s ease-in-out forwards;
+}
+
+@keyframes act {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* -----------------------------------------過場圖片 */
+
+section.act-thoughphoto div {
+	background-color: #000000;
+	position: relative;
+	opacity: 0.5;
+	z-index: 2;
+}
+
+.act-thoughphoto {
+	position: relative;
+	z-index: 1;
+	height: 5vw;
+	width: 100%;
+	overflow: hidden;
+	box-shadow: inset 0px 0px 100px 100px #000000;
+}
+
+/* -----------------------------------------先鋒任務簡介 */
+
+main section div.act-caseimg {
+	background-image: url(../image/先鋒任務圖片/先鋒任務背景圖);
+	background-size: cover;
+	height: 70rem;
+}
+
+.container .case-card:nth-child(1) {
+	background-image: url(../image/蘇爾位置圖片/歐洲死區0\ 地圖);
+}
+
+.container .case-card:nth-child(2) {
+	background-image: url(../image/蘇爾位置圖片/歐洲死區2);
+}
+
+.container .case-card:nth-child(3) {
+	background-image: url(../image/術士.jpg);
+}
+
+.container .case-card:nth-child(4) {
+	background-image: url(../image/術士.jpg);
+}
+
+.container .case-card:nth-child(5) {
+	background-image: url(../image/術士.jpg);
+}
+
+.case-container {
+	gap: 10px;
+}
+
+div.case-text {
+	padding-top: 6vw;
+}
+
+.case-card {
+	display: flex;
+	justify-content: center;
+}
+
+.container .case-card p {
+	opacity: 0;
+	transition: 0.5s;
+	color: #2d3e4f;
+	width: 60%;
+	height: 4%;
+	border: 5px solid rgb(139, 139, 139);
+	border-top: none;
+	border-radius: 0px 0px 10px 10px;
+	background-color: black;
+	padding-top: 0;
+}
+
+.container .case-card:hover p {
+	animation: act 0.5s ease-in-out forwards;
+}
+
+@keyframes act {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+/* ------------------------------熔爐競技簡介 */
+
+main section div.act-bettleimg {
+	background-image: url(../image/熔爐競技場圖片/熔爐競技背景圖.jpg);
+	background-size: cover;
+	height: 70rem;
+}
+
+.container .bettle-card:nth-child(1) {
+	background-image: url(../image/蘇爾位置圖片/歐洲死區0\ 地圖);
+}
+
+.container .bettle-card:nth-child(2) {
+	background-image: url(../image/蘇爾位置圖片/歐洲死區2);
+}
+
+.container .bettle-card:nth-child(3) {
+	background-image: url(../image/術士.jpg);
+}
+
+.container .bettle-card:nth-child(4) {
+	background-image: url(../image/術士.jpg);
+}
+
+.container .bettle-card:nth-child(5) {
+	background-image: url(../image/術士.jpg);
+}
+
+.bettle-container {
+	gap: 10px;
+}
+
+div.bettle-text {
+	padding-top: 6vw;
+}
+
+.bettle-card {
+	display: flex;
+	justify-content: center;
+}
+
+.container .bettle-card p {
+	opacity: 0;
+	transition: 0.5s;
+	color: #2d3e4f;
+	width: 60%;
+	height: 4%;
+	border: 5px solid rgb(139, 139, 139);
+	border-top: none;
+	border-radius: 0px 0px 10px 10px;
+	background-color: black;
+	padding-top: 0;
+}
+
+.container .bettle-card:hover p {
+	animation: act 0.5s ease-in-out forwards;
+}
+
+@keyframes act {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+/* ------------------------------高塔試煉簡介 */
+
+main section div.act-Trialsimg {
+	background-image: url(../image/高塔試煉圖片/高塔試煉背景圖.jpg);
+	background-size: cover;
+	height: 70rem;
+}
+
+.container .Trials-card:nth-child(1) {
+	background-image: url(../image/蘇爾位置圖片/歐洲死區0\ 地圖);
+}
+
+.container .Trials-card:nth-child(2) {
+	background-image: url(../image/蘇爾位置圖片/歐洲死區2);
+}
+
+.container .Trials-card:nth-child(3) {
+	background-image: url(../image/術士.jpg);
+}
+
+.container .Trials-card:nth-child(4) {
+	background-image: url(../image/術士.jpg);
+}
+
+.container .Trials-card:nth-child(5) {
+	background-image: url(../image/術士.jpg);
+}
+
+.Trials-container {
+	gap: 10px;
+}
+
+div.Trials-text {
+	padding-top: 6vw;
+}
+
+.Trials-card {
+	display: flex;
+	justify-content: center;
+}
+
+.container .Trials-card p {
+	opacity: 0;
+	transition: 0.5s;
+	color: #2d3e4f;
+	width: 60%;
+	height: 4%;
+	border: 5px solid rgb(139, 139, 139);
+	border-top: none;
+	border-radius: 0px 0px 10px 10px;
+	background-color: black;
+	padding-top: 0;
+}
+
+.container .Trials-card:hover p {
+	animation: act 0.5s ease-in-out forwards;
+}
+
+@keyframes act {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* ------------------------------裝備模組簡介 */
+
+main section div.act-armimg {
+	background-image: url(../image/裝備模組圖片/裝備模組背景圖.png);
+	background-size: cover;
+	height: 70rem;
+}
+
+.container .arm-card:nth-child(1) {
+	background-image: url(../image/蘇爾位置圖片/歐洲死區0\ 地圖);
+}
+
+.container .arm-card:nth-child(2) {
+	background-image: url(../image/蘇爾位置圖片/歐洲死區2);
+}
+
+.container .arm-card:nth-child(3) {
+	background-image: url(../image/術士.jpg);
+}
+
+.container .arm-card:nth-child(4) {
+	background-image: url(../image/術士.jpg);
+}
+
+.container .arm-card:nth-child(5) {
+	background-image: url(../image/術士.jpg);
+}
+
+.arm-container {
+	gap: 10px;
+}
+
+div.arm-text {
+	padding-top: 6vw;
+}
+
+.arm-card {
+	display: flex;
+	justify-content: center;
+}
+
+.container .arm-card p {
+	opacity: 0;
+	transition: 0.5s;
+	color: #2d3e4f;
+	width: 60%;
+	height: 4%;
+	border: 5px solid rgb(139, 139, 139);
+	border-top: none;
+	border-radius: 0px 0px 10px 10px;
+	background-color: black;
+	padding-top: 0;
+}
+
+.container .arm-card:hover p {
+	animation: act 0.5s ease-in-out forwards;
+}
+
+@keyframes act {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* ---------------------------------頁尾 */
+
+footer section.fo-body {
+	height: 15rem;
+	width: 100%;
+	border-top: 0.5rem solid black;
+	border-bottom: 0.5rem solid black;
+	background-image: url(../image/背景2);
+}
+
+div.fo-shadow {
+	width: 100%;
+	height: 15rem;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	justify-content: space-around;
+}
+
+div.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+footer div.logo img {
+	height: 10rem;
+	width: 10rem;
+	border: 3px solid rgba(139, 138, 138, 0.6);
+	border-radius: 50%;
+	margin: 30px 5px 0px 5px;
+}
+
+footer div.logo p {
+	color: #fff;
+	text-align: center;
+	padding-top: 1rem;
+}
+
+div.links-part {
+	margin-top: 2rem;
+}
+
+footer h4 {
+	color: #fff;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+footer div.links-part1 img {
+	height: 50px;
+	width: 50px;
+	border: 3px solid rgb(0, 13, 53);
+	border-radius: 50%;
+	margin: 30px 5px 0px 5px;
+	transition: 0.3s ease-in-out;
+}
+
+footer div.links-part1 img:hover {
+	height: 55px;
+	width: 55px;
+	border: 3px solid rgb(254, 86, 86);
+}
+
+div.links-part2 p {
+	color: #fff;
+	padding-top: 2rem;
+	font-size: 1.2rem;
+}
+
+footer div.links-part3 img {
+	height: 50px;
+	width: 100px;
+	border: none;
+	border-radius: 10px;
+	margin: 10px 5px 0px 5px;
+	transition: 0.3s ease-in-out;
+}
+
+footer div.links-part3 a.android img {
+	height: 50px;
+	width: 120px;
+}
+
+footer div.links-part3 img:hover {
+	height: 55px;
+	width: 105px;
+	border: 3px solid rgb(254, 86, 86);
+}
